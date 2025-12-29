@@ -1,10 +1,9 @@
+# The following code is adapted from:
+# Anders Malthe-Sørenssen, 'Percolation Theory Using Python', Ch. 4, Sec. 4.1
+
 import numpy as np
 import numba
 import matplotlib.pyplot as plt
-
-# --------------------------------------------------
-# Random walk on a percolation cluster (Section 11.2)
-# --------------------------------------------------
 
 @numba.njit(cache=True)
 def percwalk(cluster, max_steps):
@@ -61,11 +60,7 @@ def percwalk(cluster, max_steps):
 
     return walker_map, displacement, step
 
-
-# --------------------------------------------------
-# Averaging of mean squared displacement
-# --------------------------------------------------
-
+#### Average MSD ####
 @numba.njit(cache=True)
 def find_displacements(p, L, num_systems, num_walkers, max_steps):
 
@@ -111,3 +106,4 @@ plt.legend(loc = 'lower right', fontsize = 15)
 plt.tight_layout()
 
 plt.show()
+
