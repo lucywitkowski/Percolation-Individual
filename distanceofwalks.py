@@ -1,5 +1,5 @@
-# The following code is adapted from:
-# Anders Malthe-Sørenssen, 'Percolation Theory Using Python', Ch. 11, Sec. 11.2
+#The following code is adapted from Anders Malthe-Sørenssen,
+#'Percolation theory using Python', Section 11.2
 
 import numpy as np
 import numba
@@ -106,5 +106,6 @@ plt.legend(loc = 'lower right', fontsize = 15)
 plt.tight_layout()
 
 plt.show()
+
 
 
